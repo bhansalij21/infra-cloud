@@ -37,7 +37,29 @@ Perfect for cloud infrastructure enthusiasts looking to automate and manage thei
    ```
 
 ---
+## **Project Overview**
 
+### **Key Features**
+- Modular structure for VPC and EC2 instance provisioning.
+- Dynamic scaling of EC2 instances using `for_each`.
+- Outputs for VPC and EC2 relationships, accessible for validation.
+
+### **File Structure**
+```plaintext
+.
+├── main.tf              # Root configuration
+├── variables.tf         # Variables for dynamic configurations
+├── outputs.tf           # Outputs for root module
+├── vpc/                 # VPC module
+│   ├── main.tf          # VPC resources (VPC, Subnet, IGW, etc.)
+│   ├── outputs.tf       # Outputs for VPC module
+│   ├── variables.tf     # VPC variables
+├── ec2/                 # EC2 module
+│   ├── main.tf          # EC2 resources (instances, security groups)
+│   ├── outputs.tf       # Outputs for EC2 module
+│   ├── variables.tf     # EC2 variables
+```
+---
 ## **How to Run**
 
 ### **1. Clone the Repository**
@@ -159,33 +181,6 @@ To destroy all resources created by this project:
 ```bash
 tofu destroy
 ```
-
----
-
-## **Project Overview**
-
-### **Key Features**
-- Modular structure for VPC and EC2 instance provisioning.
-- Dynamic scaling of EC2 instances using `for_each`.
-- Outputs for VPC and EC2 relationships, accessible for validation.
-
-### **File Structure**
-```plaintext
-.
-├── main.tf              # Root configuration
-├── variables.tf         # Variables for dynamic configurations
-├── outputs.tf           # Outputs for root module
-├── vpc/                 # VPC module
-│   ├── main.tf          # VPC resources (VPC, Subnet, IGW, etc.)
-│   ├── outputs.tf       # Outputs for VPC module
-│   ├── variables.tf     # VPC variables
-├── ec2/                 # EC2 module
-│   ├── main.tf          # EC2 resources (instances, security groups)
-│   ├── outputs.tf       # Outputs for EC2 module
-│   ├── variables.tf     # EC2 variables
-```
-
----
 
 ## **Verfication & Validation : Print output on cli**
 
