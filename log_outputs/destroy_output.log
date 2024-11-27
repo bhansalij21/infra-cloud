@@ -1,0 +1,862 @@
+module.vpc.aws_vpc.custom_vpc: Refreshing state... [id=vpc-0264d207513b72ffc]
+module.vpc.aws_internet_gateway.custom_igw: Refreshing state... [id=igw-0d26da95b8397a9d9]
+module.vpc.data.aws_instances.associated_instances: Reading...
+module.vpc.aws_subnet.custom_subnet: Refreshing state... [id=subnet-0f19b8bc1ad61c535]
+module.ec2_instances["instance4"].aws_security_group.custom_sg: Refreshing state... [id=sg-0f9ccd36344cfba9a]
+module.ec2_instances["instance1"].aws_security_group.custom_sg: Refreshing state... [id=sg-025523830c87a633f]
+module.ec2_instances["instance2"].aws_security_group.custom_sg: Refreshing state... [id=sg-0c8a7dd06e619bb7e]
+module.ec2_instances["instance3"].aws_security_group.custom_sg: Refreshing state... [id=sg-0e51f7ba229249e06]
+module.vpc.aws_route_table.custom_route_table: Refreshing state... [id=rtb-01c39ca0f2730e56f]
+module.ec2_instances["instance1"].aws_instance.custom_instance: Refreshing state... [id=i-03ac4861e3ebb6ab9]
+module.ec2_instances["instance4"].aws_instance.custom_instance: Refreshing state... [id=i-030027383af0c0fd9]
+module.ec2_instances["instance2"].aws_instance.custom_instance: Refreshing state... [id=i-0d3e0f04ecf2ccc35]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Refreshing state... [id=i-0839863c7cbe9091e]
+module.vpc.data.aws_instances.associated_instances: Read complete after 0s [id=us-east-1]
+module.vpc.aws_route_table_association.custom_rta: Refreshing state... [id=rtbassoc-0c0879085e2b547ec]
+
+OpenTofu used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+OpenTofu will perform the following actions:
+
+  # module.ec2_instances["instance1"].aws_instance.custom_instance will be destroyed
+  - resource "aws_instance" "custom_instance" {
+      - ami                                  = "ami-0453ec754f44f9a4a" -> null
+      - arn                                  = "arn:aws:ec2:us-east-1:084375575555:instance/i-03ac4861e3ebb6ab9" -> null
+      - associate_public_ip_address          = true -> null
+      - availability_zone                    = "us-east-1a" -> null
+      - cpu_core_count                       = 1 -> null
+      - cpu_threads_per_core                 = 1 -> null
+      - disable_api_stop                     = false -> null
+      - disable_api_termination              = false -> null
+      - ebs_optimized                        = false -> null
+      - get_password_data                    = false -> null
+      - hibernation                          = false -> null
+      - id                                   = "i-03ac4861e3ebb6ab9" -> null
+      - instance_initiated_shutdown_behavior = "stop" -> null
+      - instance_state                       = "running" -> null
+      - instance_type                        = "t2.micro" -> null
+      - ipv6_address_count                   = 0 -> null
+      - ipv6_addresses                       = [] -> null
+      - monitoring                           = false -> null
+      - placement_partition_number           = 0 -> null
+      - primary_network_interface_id         = "eni-00bedaf885efb02df" -> null
+      - private_dns                          = "ip-90-0-1-153.ec2.internal" -> null
+      - private_ip                           = "90.0.1.153" -> null
+      - public_ip                            = "54.211.79.166" -> null
+      - secondary_private_ips                = [] -> null
+      - security_groups                      = [] -> null
+      - source_dest_check                    = true -> null
+      - subnet_id                            = "subnet-0f19b8bc1ad61c535" -> null
+      - tags                                 = {
+          - "Name"       = "CustomEC2Instance-instance1"
+          - "VantaOwner" = "svc.cloudops@itential.com"
+          - "owner"      = "ankit.bhansali@itential.com"
+        } -> null
+      - tags_all                             = {
+          - "Name"       = "CustomEC2Instance-instance1"
+          - "VantaOwner" = "svc.cloudops@itential.com"
+          - "owner"      = "ankit.bhansali@itential.com"
+        } -> null
+      - tenancy                              = "default" -> null
+      - user_data_replace_on_change          = false -> null
+      - vpc_security_group_ids               = [
+          - "sg-025523830c87a633f",
+        ] -> null
+
+      - capacity_reservation_specification {
+          - capacity_reservation_preference = "open" -> null
+        }
+
+      - cpu_options {
+          - core_count       = 1 -> null
+          - threads_per_core = 1 -> null
+        }
+
+      - credit_specification {
+          - cpu_credits = "standard" -> null
+        }
+
+      - enclave_options {
+          - enabled = false -> null
+        }
+
+      - maintenance_options {
+          - auto_recovery = "default" -> null
+        }
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_protocol_ipv6          = "disabled" -> null
+          - http_put_response_hop_limit = 2 -> null
+          - http_tokens                 = "required" -> null
+          - instance_metadata_tags      = "disabled" -> null
+        }
+
+      - private_dns_name_options {
+          - enable_resource_name_dns_a_record    = false -> null
+          - enable_resource_name_dns_aaaa_record = false -> null
+          - hostname_type                        = "ip-name" -> null
+        }
+
+      - root_block_device {
+          - delete_on_termination = true -> null
+          - device_name           = "/dev/xvda" -> null
+          - encrypted             = true -> null
+          - iops                  = 3000 -> null
+          - kms_key_id            = "arn:aws:kms:us-east-1:084375575555:key/8660acb5-f5ab-4d39-a00b-ce95efa39047" -> null
+          - tags                  = {} -> null
+          - tags_all              = {} -> null
+          - throughput            = 125 -> null
+          - volume_id             = "vol-04a0393bdefbd4b80" -> null
+          - volume_size           = 8 -> null
+          - volume_type           = "gp3" -> null
+        }
+    }
+
+  # module.ec2_instances["instance1"].aws_security_group.custom_sg will be destroyed
+  - resource "aws_security_group" "custom_sg" {
+      - arn                    = "arn:aws:ec2:us-east-1:084375575555:security-group/sg-025523830c87a633f" -> null
+      - description            = "Managed by Terraform" -> null
+      - egress                 = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = ""
+              - from_port        = 0
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 0
+            },
+        ] -> null
+      - id                     = "sg-025523830c87a633f" -> null
+      - ingress                = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = ""
+              - from_port        = 22
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 22
+            },
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = ""
+              - from_port        = 80
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 80
+            },
+        ] -> null
+      - name                   = "CustomSecurityGroup-instance1" -> null
+      - owner_id               = "084375575555" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "Name" = "CustomSecurityGroup"
+        } -> null
+      - tags_all               = {
+          - "Name" = "CustomSecurityGroup"
+        } -> null
+      - vpc_id                 = "vpc-0264d207513b72ffc" -> null
+    }
+
+  # module.ec2_instances["instance2"].aws_instance.custom_instance will be destroyed
+  - resource "aws_instance" "custom_instance" {
+      - ami                                  = "ami-0453ec754f44f9a4a" -> null
+      - arn                                  = "arn:aws:ec2:us-east-1:084375575555:instance/i-0d3e0f04ecf2ccc35" -> null
+      - associate_public_ip_address          = true -> null
+      - availability_zone                    = "us-east-1a" -> null
+      - cpu_core_count                       = 1 -> null
+      - cpu_threads_per_core                 = 1 -> null
+      - disable_api_stop                     = false -> null
+      - disable_api_termination              = false -> null
+      - ebs_optimized                        = false -> null
+      - get_password_data                    = false -> null
+      - hibernation                          = false -> null
+      - id                                   = "i-0d3e0f04ecf2ccc35" -> null
+      - instance_initiated_shutdown_behavior = "stop" -> null
+      - instance_state                       = "running" -> null
+      - instance_type                        = "t2.micro" -> null
+      - ipv6_address_count                   = 0 -> null
+      - ipv6_addresses                       = [] -> null
+      - monitoring                           = false -> null
+      - placement_partition_number           = 0 -> null
+      - primary_network_interface_id         = "eni-0eb24077f2efec052" -> null
+      - private_dns                          = "ip-90-0-1-70.ec2.internal" -> null
+      - private_ip                           = "90.0.1.70" -> null
+      - public_ip                            = "54.198.36.130" -> null
+      - secondary_private_ips                = [] -> null
+      - security_groups                      = [] -> null
+      - source_dest_check                    = true -> null
+      - subnet_id                            = "subnet-0f19b8bc1ad61c535" -> null
+      - tags                                 = {
+          - "Name"       = "CustomEC2Instance-instance2"
+          - "VantaOwner" = "svc.cloudops@itential.com"
+          - "owner"      = "ankit.bhansali@itential.com"
+        } -> null
+      - tags_all                             = {
+          - "Name"       = "CustomEC2Instance-instance2"
+          - "VantaOwner" = "svc.cloudops@itential.com"
+          - "owner"      = "ankit.bhansali@itential.com"
+        } -> null
+      - tenancy                              = "default" -> null
+      - user_data_replace_on_change          = false -> null
+      - vpc_security_group_ids               = [
+          - "sg-0c8a7dd06e619bb7e",
+        ] -> null
+
+      - capacity_reservation_specification {
+          - capacity_reservation_preference = "open" -> null
+        }
+
+      - cpu_options {
+          - core_count       = 1 -> null
+          - threads_per_core = 1 -> null
+        }
+
+      - credit_specification {
+          - cpu_credits = "standard" -> null
+        }
+
+      - enclave_options {
+          - enabled = false -> null
+        }
+
+      - maintenance_options {
+          - auto_recovery = "default" -> null
+        }
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_protocol_ipv6          = "disabled" -> null
+          - http_put_response_hop_limit = 2 -> null
+          - http_tokens                 = "required" -> null
+          - instance_metadata_tags      = "disabled" -> null
+        }
+
+      - private_dns_name_options {
+          - enable_resource_name_dns_a_record    = false -> null
+          - enable_resource_name_dns_aaaa_record = false -> null
+          - hostname_type                        = "ip-name" -> null
+        }
+
+      - root_block_device {
+          - delete_on_termination = true -> null
+          - device_name           = "/dev/xvda" -> null
+          - encrypted             = true -> null
+          - iops                  = 3000 -> null
+          - kms_key_id            = "arn:aws:kms:us-east-1:084375575555:key/8660acb5-f5ab-4d39-a00b-ce95efa39047" -> null
+          - tags                  = {} -> null
+          - tags_all              = {} -> null
+          - throughput            = 125 -> null
+          - volume_id             = "vol-0d59b9111aa89c052" -> null
+          - volume_size           = 8 -> null
+          - volume_type           = "gp3" -> null
+        }
+    }
+
+  # module.ec2_instances["instance2"].aws_security_group.custom_sg will be destroyed
+  - resource "aws_security_group" "custom_sg" {
+      - arn                    = "arn:aws:ec2:us-east-1:084375575555:security-group/sg-0c8a7dd06e619bb7e" -> null
+      - description            = "Managed by Terraform" -> null
+      - egress                 = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = ""
+              - from_port        = 0
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 0
+            },
+        ] -> null
+      - id                     = "sg-0c8a7dd06e619bb7e" -> null
+      - ingress                = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = ""
+              - from_port        = 22
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 22
+            },
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = ""
+              - from_port        = 80
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 80
+            },
+        ] -> null
+      - name                   = "CustomSecurityGroup-instance2" -> null
+      - owner_id               = "084375575555" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "Name" = "CustomSecurityGroup"
+        } -> null
+      - tags_all               = {
+          - "Name" = "CustomSecurityGroup"
+        } -> null
+      - vpc_id                 = "vpc-0264d207513b72ffc" -> null
+    }
+
+  # module.ec2_instances["instance3"].aws_instance.custom_instance will be destroyed
+  - resource "aws_instance" "custom_instance" {
+      - ami                                  = "ami-0453ec754f44f9a4a" -> null
+      - arn                                  = "arn:aws:ec2:us-east-1:084375575555:instance/i-0839863c7cbe9091e" -> null
+      - associate_public_ip_address          = true -> null
+      - availability_zone                    = "us-east-1a" -> null
+      - cpu_core_count                       = 1 -> null
+      - cpu_threads_per_core                 = 1 -> null
+      - disable_api_stop                     = false -> null
+      - disable_api_termination              = false -> null
+      - ebs_optimized                        = false -> null
+      - get_password_data                    = false -> null
+      - hibernation                          = false -> null
+      - id                                   = "i-0839863c7cbe9091e" -> null
+      - instance_initiated_shutdown_behavior = "stop" -> null
+      - instance_state                       = "running" -> null
+      - instance_type                        = "t2.micro" -> null
+      - ipv6_address_count                   = 0 -> null
+      - ipv6_addresses                       = [] -> null
+      - monitoring                           = false -> null
+      - placement_partition_number           = 0 -> null
+      - primary_network_interface_id         = "eni-07cc3e651049a30ec" -> null
+      - private_dns                          = "ip-90-0-1-55.ec2.internal" -> null
+      - private_ip                           = "90.0.1.55" -> null
+      - public_ip                            = "18.209.28.75" -> null
+      - secondary_private_ips                = [] -> null
+      - security_groups                      = [] -> null
+      - source_dest_check                    = true -> null
+      - subnet_id                            = "subnet-0f19b8bc1ad61c535" -> null
+      - tags                                 = {
+          - "Name"       = "CustomEC2Instance-instance3"
+          - "VantaOwner" = "svc.cloudops@itential.com"
+          - "owner"      = "ankit.bhansali@itential.com"
+        } -> null
+      - tags_all                             = {
+          - "Name"       = "CustomEC2Instance-instance3"
+          - "VantaOwner" = "svc.cloudops@itential.com"
+          - "owner"      = "ankit.bhansali@itential.com"
+        } -> null
+      - tenancy                              = "default" -> null
+      - user_data_replace_on_change          = false -> null
+      - vpc_security_group_ids               = [
+          - "sg-0e51f7ba229249e06",
+        ] -> null
+
+      - capacity_reservation_specification {
+          - capacity_reservation_preference = "open" -> null
+        }
+
+      - cpu_options {
+          - core_count       = 1 -> null
+          - threads_per_core = 1 -> null
+        }
+
+      - credit_specification {
+          - cpu_credits = "standard" -> null
+        }
+
+      - enclave_options {
+          - enabled = false -> null
+        }
+
+      - maintenance_options {
+          - auto_recovery = "default" -> null
+        }
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_protocol_ipv6          = "disabled" -> null
+          - http_put_response_hop_limit = 2 -> null
+          - http_tokens                 = "required" -> null
+          - instance_metadata_tags      = "disabled" -> null
+        }
+
+      - private_dns_name_options {
+          - enable_resource_name_dns_a_record    = false -> null
+          - enable_resource_name_dns_aaaa_record = false -> null
+          - hostname_type                        = "ip-name" -> null
+        }
+
+      - root_block_device {
+          - delete_on_termination = true -> null
+          - device_name           = "/dev/xvda" -> null
+          - encrypted             = true -> null
+          - iops                  = 3000 -> null
+          - kms_key_id            = "arn:aws:kms:us-east-1:084375575555:key/8660acb5-f5ab-4d39-a00b-ce95efa39047" -> null
+          - tags                  = {} -> null
+          - tags_all              = {} -> null
+          - throughput            = 125 -> null
+          - volume_id             = "vol-044fa88a01c4f7b86" -> null
+          - volume_size           = 8 -> null
+          - volume_type           = "gp3" -> null
+        }
+    }
+
+  # module.ec2_instances["instance3"].aws_security_group.custom_sg will be destroyed
+  - resource "aws_security_group" "custom_sg" {
+      - arn                    = "arn:aws:ec2:us-east-1:084375575555:security-group/sg-0e51f7ba229249e06" -> null
+      - description            = "Managed by Terraform" -> null
+      - egress                 = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = ""
+              - from_port        = 0
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 0
+            },
+        ] -> null
+      - id                     = "sg-0e51f7ba229249e06" -> null
+      - ingress                = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = ""
+              - from_port        = 22
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 22
+            },
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = ""
+              - from_port        = 80
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 80
+            },
+        ] -> null
+      - name                   = "CustomSecurityGroup-instance3" -> null
+      - owner_id               = "084375575555" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "Name" = "CustomSecurityGroup"
+        } -> null
+      - tags_all               = {
+          - "Name" = "CustomSecurityGroup"
+        } -> null
+      - vpc_id                 = "vpc-0264d207513b72ffc" -> null
+    }
+
+  # module.ec2_instances["instance4"].aws_instance.custom_instance will be destroyed
+  - resource "aws_instance" "custom_instance" {
+      - ami                                  = "ami-0453ec754f44f9a4a" -> null
+      - arn                                  = "arn:aws:ec2:us-east-1:084375575555:instance/i-030027383af0c0fd9" -> null
+      - associate_public_ip_address          = true -> null
+      - availability_zone                    = "us-east-1a" -> null
+      - cpu_core_count                       = 1 -> null
+      - cpu_threads_per_core                 = 1 -> null
+      - disable_api_stop                     = false -> null
+      - disable_api_termination              = false -> null
+      - ebs_optimized                        = false -> null
+      - get_password_data                    = false -> null
+      - hibernation                          = false -> null
+      - id                                   = "i-030027383af0c0fd9" -> null
+      - instance_initiated_shutdown_behavior = "stop" -> null
+      - instance_state                       = "running" -> null
+      - instance_type                        = "t2.micro" -> null
+      - ipv6_address_count                   = 0 -> null
+      - ipv6_addresses                       = [] -> null
+      - monitoring                           = false -> null
+      - placement_partition_number           = 0 -> null
+      - primary_network_interface_id         = "eni-003d07a186e3065ef" -> null
+      - private_dns                          = "ip-90-0-1-51.ec2.internal" -> null
+      - private_ip                           = "90.0.1.51" -> null
+      - public_ip                            = "3.81.234.203" -> null
+      - secondary_private_ips                = [] -> null
+      - security_groups                      = [] -> null
+      - source_dest_check                    = true -> null
+      - subnet_id                            = "subnet-0f19b8bc1ad61c535" -> null
+      - tags                                 = {
+          - "Name"       = "CustomEC2Instance-instance4"
+          - "VantaOwner" = "svc.cloudops@itential.com"
+          - "owner"      = "ankit.bhansali@itential.com"
+        } -> null
+      - tags_all                             = {
+          - "Name"       = "CustomEC2Instance-instance4"
+          - "VantaOwner" = "svc.cloudops@itential.com"
+          - "owner"      = "ankit.bhansali@itential.com"
+        } -> null
+      - tenancy                              = "default" -> null
+      - user_data_replace_on_change          = false -> null
+      - vpc_security_group_ids               = [
+          - "sg-0f9ccd36344cfba9a",
+        ] -> null
+
+      - capacity_reservation_specification {
+          - capacity_reservation_preference = "open" -> null
+        }
+
+      - cpu_options {
+          - core_count       = 1 -> null
+          - threads_per_core = 1 -> null
+        }
+
+      - credit_specification {
+          - cpu_credits = "standard" -> null
+        }
+
+      - enclave_options {
+          - enabled = false -> null
+        }
+
+      - maintenance_options {
+          - auto_recovery = "default" -> null
+        }
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_protocol_ipv6          = "disabled" -> null
+          - http_put_response_hop_limit = 2 -> null
+          - http_tokens                 = "required" -> null
+          - instance_metadata_tags      = "disabled" -> null
+        }
+
+      - private_dns_name_options {
+          - enable_resource_name_dns_a_record    = false -> null
+          - enable_resource_name_dns_aaaa_record = false -> null
+          - hostname_type                        = "ip-name" -> null
+        }
+
+      - root_block_device {
+          - delete_on_termination = true -> null
+          - device_name           = "/dev/xvda" -> null
+          - encrypted             = true -> null
+          - iops                  = 3000 -> null
+          - kms_key_id            = "arn:aws:kms:us-east-1:084375575555:key/8660acb5-f5ab-4d39-a00b-ce95efa39047" -> null
+          - tags                  = {} -> null
+          - tags_all              = {} -> null
+          - throughput            = 125 -> null
+          - volume_id             = "vol-0a54d23fbf5e13436" -> null
+          - volume_size           = 8 -> null
+          - volume_type           = "gp3" -> null
+        }
+    }
+
+  # module.ec2_instances["instance4"].aws_security_group.custom_sg will be destroyed
+  - resource "aws_security_group" "custom_sg" {
+      - arn                    = "arn:aws:ec2:us-east-1:084375575555:security-group/sg-0f9ccd36344cfba9a" -> null
+      - description            = "Managed by Terraform" -> null
+      - egress                 = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = ""
+              - from_port        = 0
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 0
+            },
+        ] -> null
+      - id                     = "sg-0f9ccd36344cfba9a" -> null
+      - ingress                = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = ""
+              - from_port        = 22
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 22
+            },
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = ""
+              - from_port        = 80
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 80
+            },
+        ] -> null
+      - name                   = "CustomSecurityGroup-instance4" -> null
+      - owner_id               = "084375575555" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "Name" = "CustomSecurityGroup"
+        } -> null
+      - tags_all               = {
+          - "Name" = "CustomSecurityGroup"
+        } -> null
+      - vpc_id                 = "vpc-0264d207513b72ffc" -> null
+    }
+
+  # module.vpc.aws_internet_gateway.custom_igw will be destroyed
+  - resource "aws_internet_gateway" "custom_igw" {
+      - arn      = "arn:aws:ec2:us-east-1:084375575555:internet-gateway/igw-0d26da95b8397a9d9" -> null
+      - id       = "igw-0d26da95b8397a9d9" -> null
+      - owner_id = "084375575555" -> null
+      - tags     = {
+          - "Name" = "CustomIGW"
+        } -> null
+      - tags_all = {
+          - "Name" = "CustomIGW"
+        } -> null
+      - vpc_id   = "vpc-0264d207513b72ffc" -> null
+    }
+
+  # module.vpc.aws_route_table.custom_route_table will be destroyed
+  - resource "aws_route_table" "custom_route_table" {
+      - arn              = "arn:aws:ec2:us-east-1:084375575555:route-table/rtb-01c39ca0f2730e56f" -> null
+      - id               = "rtb-01c39ca0f2730e56f" -> null
+      - owner_id         = "084375575555" -> null
+      - propagating_vgws = [] -> null
+      - route            = [
+          - {
+              - carrier_gateway_id         = ""
+              - cidr_block                 = "0.0.0.0/0"
+              - core_network_arn           = ""
+              - destination_prefix_list_id = ""
+              - egress_only_gateway_id     = ""
+              - gateway_id                 = "igw-0d26da95b8397a9d9"
+              - ipv6_cidr_block            = ""
+              - local_gateway_id           = ""
+              - nat_gateway_id             = ""
+              - network_interface_id       = ""
+              - transit_gateway_id         = ""
+              - vpc_endpoint_id            = ""
+              - vpc_peering_connection_id  = ""
+            },
+        ] -> null
+      - tags             = {
+          - "Name" = "CustomRouteTable"
+        } -> null
+      - tags_all         = {
+          - "Name" = "CustomRouteTable"
+        } -> null
+      - vpc_id           = "vpc-0264d207513b72ffc" -> null
+    }
+
+  # module.vpc.aws_route_table_association.custom_rta will be destroyed
+  - resource "aws_route_table_association" "custom_rta" {
+      - id             = "rtbassoc-0c0879085e2b547ec" -> null
+      - route_table_id = "rtb-01c39ca0f2730e56f" -> null
+      - subnet_id      = "subnet-0f19b8bc1ad61c535" -> null
+    }
+
+  # module.vpc.aws_subnet.custom_subnet will be destroyed
+  - resource "aws_subnet" "custom_subnet" {
+      - arn                                            = "arn:aws:ec2:us-east-1:084375575555:subnet/subnet-0f19b8bc1ad61c535" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-1a" -> null
+      - availability_zone_id                           = "use1-az6" -> null
+      - cidr_block                                     = "90.0.1.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0f19b8bc1ad61c535" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = true -> null
+      - owner_id                                       = "084375575555" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Name" = "CustomSubnet"
+        } -> null
+      - tags_all                                       = {
+          - "Name" = "CustomSubnet"
+        } -> null
+      - vpc_id                                         = "vpc-0264d207513b72ffc" -> null
+    }
+
+  # module.vpc.aws_vpc.custom_vpc will be destroyed
+  - resource "aws_vpc" "custom_vpc" {
+      - arn                                  = "arn:aws:ec2:us-east-1:084375575555:vpc/vpc-0264d207513b72ffc" -> null
+      - assign_generated_ipv6_cidr_block     = false -> null
+      - cidr_block                           = "90.0.0.0/20" -> null
+      - default_network_acl_id               = "acl-030c90689a1d70ae5" -> null
+      - default_route_table_id               = "rtb-0bbe22cd20c1598af" -> null
+      - default_security_group_id            = "sg-0540b8650faa62457" -> null
+      - dhcp_options_id                      = "dopt-0cd5614b872a4abb4" -> null
+      - enable_dns_hostnames                 = false -> null
+      - enable_dns_support                   = true -> null
+      - enable_network_address_usage_metrics = false -> null
+      - id                                   = "vpc-0264d207513b72ffc" -> null
+      - instance_tenancy                     = "default" -> null
+      - ipv6_netmask_length                  = 0 -> null
+      - main_route_table_id                  = "rtb-0bbe22cd20c1598af" -> null
+      - owner_id                             = "084375575555" -> null
+      - tags                                 = {
+          - "Name" = "CustomVPC"
+        } -> null
+      - tags_all                             = {
+          - "Name" = "CustomVPC"
+        } -> null
+    }
+
+Plan: 0 to add, 0 to change, 13 to destroy.
+
+Changes to Outputs:
+  - associated_ec2_instance_ids = [
+      - "i-030027383af0c0fd9",
+      - "i-0839863c7cbe9091e",
+      - "i-03ac4861e3ebb6ab9",
+      - "i-0d3e0f04ecf2ccc35",
+    ] -> null
+  - associated_ec2_public_ips   = [
+      - "3.81.234.203",
+      - "18.209.28.75",
+      - "54.211.79.166",
+      - "54.198.36.130",
+    ] -> null
+  - subnet_id                   = "subnet-0f19b8bc1ad61c535" -> null
+  - vpc_id                      = "vpc-0264d207513b72ffc" -> null
+module.vpc.aws_route_table_association.custom_rta: Destroying... [id=rtbassoc-0c0879085e2b547ec]
+module.ec2_instances["instance1"].aws_instance.custom_instance: Destroying... [id=i-03ac4861e3ebb6ab9]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Destroying... [id=i-0839863c7cbe9091e]
+module.ec2_instances["instance4"].aws_instance.custom_instance: Destroying... [id=i-030027383af0c0fd9]
+module.ec2_instances["instance2"].aws_instance.custom_instance: Destroying... [id=i-0d3e0f04ecf2ccc35]
+module.vpc.aws_route_table_association.custom_rta: Destruction complete after 1s
+module.vpc.aws_route_table.custom_route_table: Destroying... [id=rtb-01c39ca0f2730e56f]
+module.vpc.aws_route_table.custom_route_table: Destruction complete after 0s
+module.vpc.aws_internet_gateway.custom_igw: Destroying... [id=igw-0d26da95b8397a9d9]
+module.ec2_instances["instance1"].aws_instance.custom_instance: Still destroying... [id=i-03ac4861e3ebb6ab9, 10s elapsed]
+module.ec2_instances["instance2"].aws_instance.custom_instance: Still destroying... [id=i-0d3e0f04ecf2ccc35, 10s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 10s elapsed]
+module.ec2_instances["instance4"].aws_instance.custom_instance: Still destroying... [id=i-030027383af0c0fd9, 10s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 10s elapsed]
+module.ec2_instances["instance4"].aws_instance.custom_instance: Still destroying... [id=i-030027383af0c0fd9, 20s elapsed]
+module.ec2_instances["instance2"].aws_instance.custom_instance: Still destroying... [id=i-0d3e0f04ecf2ccc35, 20s elapsed]
+module.ec2_instances["instance1"].aws_instance.custom_instance: Still destroying... [id=i-03ac4861e3ebb6ab9, 20s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 20s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 20s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 30s elapsed]
+module.ec2_instances["instance1"].aws_instance.custom_instance: Still destroying... [id=i-03ac4861e3ebb6ab9, 30s elapsed]
+module.ec2_instances["instance2"].aws_instance.custom_instance: Still destroying... [id=i-0d3e0f04ecf2ccc35, 30s elapsed]
+module.ec2_instances["instance4"].aws_instance.custom_instance: Still destroying... [id=i-030027383af0c0fd9, 30s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 30s elapsed]
+module.ec2_instances["instance1"].aws_instance.custom_instance: Still destroying... [id=i-03ac4861e3ebb6ab9, 40s elapsed]
+module.ec2_instances["instance4"].aws_instance.custom_instance: Still destroying... [id=i-030027383af0c0fd9, 40s elapsed]
+module.ec2_instances["instance2"].aws_instance.custom_instance: Still destroying... [id=i-0d3e0f04ecf2ccc35, 40s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 40s elapsed]
+module.ec2_instances["instance2"].aws_instance.custom_instance: Destruction complete after 41s
+module.ec2_instances["instance2"].aws_security_group.custom_sg: Destroying... [id=sg-0c8a7dd06e619bb7e]
+module.ec2_instances["instance2"].aws_security_group.custom_sg: Destruction complete after 0s
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 40s elapsed]
+module.ec2_instances["instance1"].aws_instance.custom_instance: Still destroying... [id=i-03ac4861e3ebb6ab9, 50s elapsed]
+module.ec2_instances["instance4"].aws_instance.custom_instance: Still destroying... [id=i-030027383af0c0fd9, 50s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 50s elapsed]
+module.ec2_instances["instance1"].aws_instance.custom_instance: Destruction complete after 51s
+module.ec2_instances["instance1"].aws_security_group.custom_sg: Destroying... [id=sg-025523830c87a633f]
+module.ec2_instances["instance4"].aws_instance.custom_instance: Destruction complete after 51s
+module.ec2_instances["instance4"].aws_security_group.custom_sg: Destroying... [id=sg-0f9ccd36344cfba9a]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 50s elapsed]
+module.ec2_instances["instance1"].aws_security_group.custom_sg: Destruction complete after 0s
+module.ec2_instances["instance4"].aws_security_group.custom_sg: Destruction complete after 0s
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 1m0s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 1m0s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 1m10s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 1m10s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 1m20s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 1m20s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 1m30s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 1m30s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 1m40s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 1m40s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 1m50s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 1m50s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 2m0s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 2m0s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 2m10s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 2m10s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 2m20s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 2m20s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 2m30s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 2m30s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 2m40s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 2m40s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 2m50s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 2m50s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 3m0s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 3m0s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 3m10s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 3m10s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 3m20s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 3m20s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 3m30s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 3m30s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 3m40s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 3m40s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 3m50s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 3m50s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 4m0s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 4m0s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 4m10s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 4m10s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 4m20s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 4m20s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 4m30s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 4m30s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 4m40s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Still destroying... [id=igw-0d26da95b8397a9d9, 4m40s elapsed]
+module.vpc.aws_internet_gateway.custom_igw: Destruction complete after 4m44s
+module.ec2_instances["instance3"].aws_instance.custom_instance: Still destroying... [id=i-0839863c7cbe9091e, 4m50s elapsed]
+module.ec2_instances["instance3"].aws_instance.custom_instance: Destruction complete after 4m54s
+module.vpc.aws_subnet.custom_subnet: Destroying... [id=subnet-0f19b8bc1ad61c535]
+module.ec2_instances["instance3"].aws_security_group.custom_sg: Destroying... [id=sg-0e51f7ba229249e06]
+module.vpc.aws_subnet.custom_subnet: Destruction complete after 1s
+module.ec2_instances["instance3"].aws_security_group.custom_sg: Destruction complete after 1s
+module.vpc.aws_vpc.custom_vpc: Destroying... [id=vpc-0264d207513b72ffc]
+module.vpc.aws_vpc.custom_vpc: Destruction complete after 0s
+
+Destroy complete! Resources: 13 destroyed.
