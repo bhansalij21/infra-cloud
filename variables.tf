@@ -12,15 +12,15 @@ variable "ec2_instances" {
     }
     instance2 = {
       ami           = "ami-0453ec754f44f9a4a" # Replace with a valid AMI ID
-      instance_type = "t2.small"
+      instance_type = "t2.micro"
     }
     instance3 = {
       ami           = "ami-0453ec754f44f9a4a" # Replace with a valid AMI ID
-      instance_type = "t2.small"
+      instance_type = "t2.micro"
     }
     instance4 = {
       ami           = "ami-0453ec754f44f9a4a" # Replace with a valid AMI ID
-      instance_type = "t2.small"
+      instance_type = "t2.micro"
     }
   }
 }

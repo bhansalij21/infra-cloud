@@ -13,7 +13,6 @@ provider "aws" {
 
 module "vpc" {
   source = "./vpc"
-
   vpc_cidr          = "90.0.0.0/20"
   subnet_cidr       = "90.0.1.0/24"
   availability_zone = "us-east-1a"
@@ -26,15 +25,12 @@ module "vpc" {
 # EC2 Instances - Dynamically Provision Multiple Instances
 module "ec2_instances" {
   source = "./ec2"
-
   for_each        = var.ec2_instances
   vpc_id          = module.vpc.vpc_id
   subnet_id       = module.vpc.subnet_id
   instance_name_suffix = each.key
-
   ami             = each.value.ami
   instance_type   = each.value.instance_type
-
   providers = {
     aws = aws
   }
