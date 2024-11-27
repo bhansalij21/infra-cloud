@@ -3,10 +3,10 @@
 Infra-Cloud is a modular infrastructure automation project using OpenTofu (Terraform fork). It provisions a cloud-native VPC environment and dynamically deploys scalable EC2 instances. The repository is designed for flexibility, allowing easy addition of resources and enabling seamless validation of relationships between infrastructure components.
 
 Key Features:
-	•	VPC Automation: Creates a fully configurable VPC with subnets, route tables, and an internet gateway.
-	•	Dynamic EC2 Scaling: Deploys EC2 instances dynamically using for_each, ensuring efficient resource management.
-	•	Validation Outputs: Provides detailed outputs for resource IDs and relationships, with built-in testing using Terraform outputs and AWS CLI.
-	•	Modular Structure: Clean separation of VPC and EC2 modules for easy scalability and reusability.
+-	VPC Automation: Creates a fully configurable VPC with subnets, route tables, and an internet gateway.
+-	Dynamic EC2 Scaling: Deploys EC2 instances dynamically using for_each, ensuring efficient resource management.
+-	Validation Outputs: Provides detailed outputs for resource IDs and relationships, with built-in testing using Terraform outputs and AWS CLI.
+-	Modular Structure: Clean separation of VPC and EC2 modules for easy scalability and reusability.
 
 Perfect for cloud infrastructure enthusiasts looking to automate and manage their environments with simplicity and flexibility.
 
