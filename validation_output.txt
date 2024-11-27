@@ -1,0 +1,34 @@
+### Terraform Outputs ###
+
+VPC ID:
+"vpc-0e35206e02ccb7917"
+
+Subnet ID:
+"subnet-01335b12ef794146c"
+
+Associated EC2 Instance IDs:
+tolist([
+  "i-02273ccb801403c9c",
+  "i-05de71526920f40da",
+  "i-02649eb7fae9223bd",
+  "i-018507ae36a5c49f7",
+])
+
+Associated EC2 Public IPs:
+tolist([
+  "52.90.121.99",
+  "54.196.193.86",
+  "54.158.149.200",
+  "23.20.182.221",
+])
+
+### AWS CLI Validation ###
+EC2 Instances in VPC vpc-0e35206e02ccb7917:
+-------------------------------------------
+|            DescribeInstances            |
++----------------------+------------------+
+|  i-02273ccb801403c9c |  52.90.121.99    |
+|  i-05de71526920f40da |  54.196.193.86   |
+|  i-02649eb7fae9223bd |  54.158.149.200  |
+|  i-018507ae36a5c49f7 |  23.20.182.221   |
++----------------------+------------------+
