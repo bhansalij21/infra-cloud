@@ -1,5 +1,5 @@
 # Infra-Cloud: Modular Infrastructure Automation with OpenTofu
-**OpenTofu VPC and EC2 Infrastructure**
+## **OpenTofu VPC and EC2 Infrastructure**
 Infra-Cloud is a modular infrastructure automation project using OpenTofu (Terraform fork). It provisions a cloud-native VPC environment and dynamically deploys scalable EC2 instances. The repository is designed for flexibility, allowing easy addition of resources and enabling seamless validation of relationships between infrastructure components.
 
 Key Features:
